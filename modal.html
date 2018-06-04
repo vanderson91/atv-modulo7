@@ -1,0 +1,289 @@
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=1000px, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Buttons</title>
+		<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./bower_components/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+		<style>
+			
+			/*modifier*/
+			.btn{
+				text-transform: uppercase;
+				font-size: 0.7rem;
+				padding: 0.5rem 2rem;
+				background-color: white;
+			}
+			.modal-content{
+				text-align: center;
+			}
+			.modal-header{
+				min-height: 100px;
+				justify-content: space-between;
+			}
+			.modal-title{
+				font-size: 2rem;
+			}
+			.modal-body{
+				justify-content: center;
+				font-style: bold;
+				color: #95a5a6;
+			}
+			
+			.modal-footer{
+				justify-content: center;
+				border-color:transparent;	
+			}
+			.close{
+				align-self: flex-start;
+				color:white;
+			}
+			.modal-title > i{
+				background-color: white;
+				padding: .5rem;
+				border-radius: 2rem;
+				font-style: bold;
+			}
+			/*temas*/
+			/* success*/
+			.btn-tema-success {
+				border-color: #27ae60;
+				color:#27ae60;
+			}
+			.btn-tema-success:hover{
+				background-color: #27ae60;
+				border-color: #27ae60;
+				color: white;
+			}
+
+			.modal-header.modal-tema-success > .modal-title > i,
+			.modal-body.modal-tema-success > h2{
+				color:#27ae60;
+			}
+			.modal-header.modal-tema-success{
+				background-color: #27ae60;
+			}
+			
+			/* primary */
+			.btn-tema-primary {
+				border-color: #007bff;
+				color:#007bff;
+			}
+			.btn-tema-primary:hover{
+				background-color: #007bff;
+				border-color: #007bff;
+				color: white;
+			}
+
+			.modal-header.modal-tema-primary > .modal-title > i,
+			.modal-body.modal-tema-primary > h2{
+				color:#007bff;
+			}
+			.modal-header.modal-tema-primary{
+				background-color: #007bff;
+			}
+			
+			/* warning */
+			.btn-tema-warning {
+				border-color: #d39e00;
+				color:#d39e00;
+				background-color: #fff;
+			}
+			.btn-tema-warning:hover{
+				border-color:#d39e00;
+				background-color: #e0a800;
+				color: #fff;
+			}
+
+			 .modal-header.modal-tema-warning > .modal-title > i,
+			.modal-body.modal-tema-warning > h2{
+				color:#856404;
+			}
+			.modal-header.modal-tema-warning{
+				background-color: #d39e00;
+			} 
+			
+			/* info */
+			.btn-tema-info {
+				border-color: #17a2b8;
+				color:#17a2b8;
+				background-color: #fff;
+			}
+			.btn-tema-info:hover{
+				border-color:#17a2b8;
+				background-color: #17a2b8;
+				color: #fff;
+			}
+
+			.modal-header.modal-tema-info > .modal-title > i,
+			.modal-body.modal-tema-info > h2{
+				color:#17a2b8;
+			}
+			.modal-header.modal-tema-info{
+				background-color: #17a2b8;
+			}
+			
+			/* danger */
+			.btn-tema-danger {
+				border-color: #dc3545;
+				color:#dc3545;
+				background-color: #fff;
+			}
+			.btn-tema-danger:hover{
+				border-color:#bd2130;
+				background-color: #c82333;
+				color: #fff;
+			}
+
+			.modal-header.modal-tema-danger > .modal-title > i,
+			.modal-body.modal-tema-danger > h2{
+				color:#c82333;
+			}
+			.modal-header.modal-tema-danger{
+				background-color: #c82333;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<br><br>
+			<button type="button" class="btn btn-tema-success" data-toggle="modal" data-target="#modalSucesso"> Sucesso </button>
+			<button type="button" class="btn btn-tema-primary" data-toggle="modal" data-target="#modalPrimary"> Primary </button>
+			<button type="button" class="btn btn-tema-warning" data-toggle="modal" data-target="#modalWarning"> warning </button>
+			<button type="button" class="btn btn-tema-info" data-toggle="modal" data-target="#modalInfo"> info </button>
+			<button type="button" class="btn btn-tema-danger" data-toggle="modal" data-target="#modalDanger"> danger </button>
+		</div>
+
+		<!-- Modal Sucesso -->
+		<div class="modal fade" id="modalSucesso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header modal-tema-success">
+						<div></div>
+						<h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-check"></i></h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body modal-tema-success">
+						<h2>Great!</h2>
+						<p>Your data has been successfully saved.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-tema-success btn-secondary" data-dismiss="modal">Back To My work</button>
+						<button type="button" class="btn btn-tema-success btn-primary">Back to store hours</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal primary -->
+		<div class="modal fade" id="modalPrimary" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header modal-tema-primary">
+						<div></div>
+						<h5 class="modal-title" id="exampleModalLabel">
+							<i class="fas fa-check"></i>
+						</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body modal-tema-primary">
+						<h2>Great!</h2>
+						<p>Your data has been successfully saved.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-tema-primary btn-secondary" data-dismiss="modal">Back To My work</button>
+						<button type="button" class="btn btn-tema-primary btn-primary">Back to store hours</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal warning -->
+		<div class="modal fade" id="modalWarning" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header modal-tema-warning">
+						<div></div>
+						<h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-check"></i></h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body modal-tema-warning">
+						<h2>Great!</h2>
+						<p>Your data has been successfully saved.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-tema-warning btn-secondary" data-dismiss="modal">Back To My work</button>
+						<button type="button" class="btn btn-tema-warning btn-primary">Back to store hours</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+
+		<!-- Modal info -->
+		<div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header modal-tema-info">
+						<div></div>
+						<h5 class="modal-title" id="exampleModalLabel">
+							<i class="fas fa-check"></i>
+						</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body modal-tema-info">
+						<h2>Great!</h2>
+						<p>Your data has been successfully saved.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-tema-info btn-secondary" data-dismiss="modal">Back To My work</button>
+						<button type="button" class="btn btn-tema-info btn-info">Back to store hours</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal danger -->
+		<div class="modal fade" id="modalDanger" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header modal-tema-danger">
+						<div></div>
+						<h5 class="modal-title" id="exampleModalLabel">
+							<i class="fas fa-check"></i>
+						</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body modal-tema-danger">
+						<h2>Great!</h2>
+						<p>Your data has been successfully saved.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-tema-danger btn-secondary" data-dismiss="modal">Back To My work</button>
+						<button type="button" class="btn btn-tema-danger btn-danger">Back to store hours</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="./bower_components/tether/dist/js/tether.min.js"></script>
+		<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	
+	</body>
+	
+</html>
